@@ -1,0 +1,23 @@
+{
+  "name": "oxygen",
+  "version": "1.0.0",
+  "description": "There will be my project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ismyloven/OXYGEN.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ismyloven/OXYGEN/issues"
+  },
+  "homepage": "https://github.com/ismyloven/OXYGEN#readme",
+  "dependencies": {
+    "jquery": "^3.5.0",
+    "react": "^16.13.1"
+  }
+}

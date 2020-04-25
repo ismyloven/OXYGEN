@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lesson 8</title>
+	<style>
+		h1,h2,h3 {
+			text-align: center;
+			clear: both;
+		}
+
+		fieldset {
+			width: 24%;
+			height: 250px;
+			padding: 0 20px;
+			box-sizing: border-box;
+			float: left;
+		}
+
+		div {
+			padding-top: 60px;
+			padding-left: 30px;
+		}
+
+	</style>
+	<script>
+	  function sizePic() {
+		  size = document.getElementById("size").value;
+		  img = document.getElementById("pic");
+		  img.width = 60 + 20 * size;
+	  }
+	</script>
+</head>
+<body>
+<h1>Формы. Урок 8</h1>
+<form enctype="multipart/form-data" method="post">
+	<fieldset>
+		<div>
+			<select name="text">
+				<option>Вариант№1</option>
+				<option selected>Вариант№2</option>
+				<option>Вариант№3</option>
+				<option>Вариант№4</option>
+				<option>Вариант№5</option>
+			</select>
+			<input type="submit" value="Отправить">
+		</div>
+	</fieldset>
+	<fieldset>
+		<div>
+			<select name="text" multiple size="5">
+				<option selected>Вариант№1</option>
+				<option>Вариант№2</option>
+				<option>Вариант№3</option>
+				<option>Вариант№4</option>
+				<option>Вариант№5</option>
+			</select>
+			<input type="submit" value="Отправить">
+		</div>
+	</fieldset>
+	<fieldset class="three">
+		<div>
+			<p><strong>Укажите цифру:</strong></p>
+			<input type="number" value="4">
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<div>
+			<select name="text">
+				<option>Вариант№1</option>
+				<option selected>Вариант№2</option>
+				<option>Вариант№3</option>
+				<option>Вариант№4</option>
+				<option>Вариант№5</option>
+			</select>
+		</div>
+	</fieldset>
+	<fieldset>
+		<p><strong>Размер рисунка:</strong><input type="range" min="1" max="5" id="size" oninput="sizePic()" value="3"></p>
+		<p><img src="image/Raptor.png" id="pic" alt="изображение раптора"
+						title="самый опасный хищник, но не бойся, этот вид давно вымер" width="200" height="130"></p>
+	</fieldset>
+	<fieldset>
+		<div>
+			<input type="submit" value="Очистить" style="margin:70px 70px">
+		</div>
+	</fieldset>
+	<fieldset>
+		<div style="margin-top: 70px">
+			<input required placeholder="Поиск по сайту" type="text">
+			<input type="submit" value="Найти">
+		</div>
+	</fieldset>
+	<fieldset>
+		<div>
+			<p style="margin:70px 1px"><strong>Укажите цвет фона:<input type="color" name="color" value="#00FF00"></strong>
+				<input type="submit" value="Выбрать">
+			</p></div>
+	</fieldset>
+	<fieldset>
+		<div>
+			<p><strong style="margin-left: 70px">Укажите:</strong></p>
+			<p><input type="radio" value="Radio" style="margin-left: 40px"><strong>Radio BUTTON</strong></p>
+			<p><input type="radio" value="Radio" style="margin-left: 40px"><strong>Radio BUTTON</strong></p>
+			<p><input type="radio" value="Radio" style="margin-left: 40px"><strong>Radio BUTTON</strong></p>
+			<input type="button" value="Submit" style="margin-left: 70px">
+		</div>
+	</fieldset>
+	<fieldset>
+		<div>
+			<p><strong style="margin-left: 70px">Введите текст:</strong></p>
+			<textarea rows="2" cols="25" style="margin-left: 40px"></textarea><br>
+			<input type="button" value="Submit" style="margin-left: 90px">
+		</div>
+	</fieldset>
+	<fieldset>
+		<p><strong style="margin-left: 70px">Укажите дату:</strong></p>
+		<p><input type="checkbox" name="a" value="2010" style="margin-left: 95px">2010</p>
+		<p><input type="checkbox" name="a" value="2014" style="margin-left: 95px">2014</p>
+		<p><input type="checkbox" name="a" value="2017" style="margin-left: 95px">2017</p>
+		<p><input type="checkbox" name="a" value="2019" style="margin-left: 95px">2019</p>
+		<input type="button" value="Отправить" style="margin-left: 90px">
+	</fieldset>
+	<fieldset>
+		<div>
+			<p><strong>Загрузите фотографии</strong></p>
+			<p></p><input type="file" name="photo" multiple accept="image/* image/jpeg">
+			<input type="submit" value="Отправить"></p>
+		</div>
+	</fieldset><br>
+	<h2> А теперь немного милоты</h2>
+	<video controls width="400" style="padding-left: 550px" autoplay loop poster="video/кролик.mp4">
+		<source src="video/кролик.mp4" type="video/mp4">
+	</video>
+	<h3> Просмотр видео только под музыку</h3>
+<audio controls autoplay loop style="padding-left: 600px">
+<source type="audio/mp3" src="audio/Love.mp3">
+</audio>
+</form>
+</body>
+</html>
